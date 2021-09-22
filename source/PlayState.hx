@@ -232,6 +232,13 @@ class PlayState extends MusicBeatState
 	
 	public function addObject(object:FlxBasic) { add(object); }
 	public function removeObject(object:FlxBasic) { remove(object); }
+	
+	function switchAnim() 
+	{
+		dad = new Character(2, 3, 'new sprite');
+                dad.setPosition(162.4, 76.65);
+                add(dad);	
+	}
 
 
 	override public function create()
