@@ -232,14 +232,13 @@ class PlayState extends MusicBeatState
 	
 	public function addObject(object:FlxBasic) { add(object); }
 	public function removeObject(object:FlxBasic) { remove(object); }
-	
-	function switchAnim() 
-	{
-		dad = new Character(2, 3, 'new sprite');
-                dad.setPosition(162.4, 76.65);
-                add(dad);	
-	}
 
+	function SwitchAnim() 
+	{
+		dad = new Character(2, 3, 'deimos-guitar');
+		dad.setPosition(162.4, 76.65);
+		add(dad);	
+	}
 
 	override public function create()
 	{
@@ -306,6 +305,12 @@ class PlayState extends MusicBeatState
 			case 'mom-car':
 				iconRPC = 'mom';
 		}
+
+		If (curStep == 15 && curSong == 'cigar')
+		{
+			SwitchAnim()
+		}
+		
 
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
@@ -864,8 +869,6 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
-
-		
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
 
 		// REPOSITIONING PER STAGE
