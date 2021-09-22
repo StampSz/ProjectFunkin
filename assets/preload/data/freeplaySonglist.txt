@@ -1,1 +1,2 @@
 cigar:deimos:1
+rising-smokes:deimos:1
