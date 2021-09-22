@@ -139,23 +139,40 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
-				case 'deimos':
-					// DAD ANIMATION LOADING CODE
-					tex = Paths.getSparrowAtlas('characters/deimos', 'shared');
-					frames = tex;
-					animation.addByPrefix('idle', 'Didle', 24);
-					animation.addByPrefix('singUP', 'up', 24);
-					animation.addByPrefix('singRIGHT', 'right', 24);
-					animation.addByPrefix('singDOWN', 'down', 24);
-					animation.addByPrefix('singLEFT', 'left', 24);
+			case 'deimos':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/deimos', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Didle', 24);
+				animation.addByPrefix('singUP', 'up', 24);
+				animation.addByPrefix('singRIGHT', 'right', 24);
+				animation.addByPrefix('singDOWN', 'down', 24);
+				animation.addByPrefix('singLEFT', 'left', 24);
 	
-					addOffset('idle');
-					addOffset("singUP", -6, 50);
-					addOffset("singRIGHT", 0, 27);
-					addOffset("singLEFT", -10, 10);
-					addOffset("singDOWN", 0, -30);
+				addOffset('idle');
+				addOffset("singUP", 7, -6);
+				addOffset("singRIGHT", -35, 0);
+				addOffset("singLEFT", 0, -29);
+				addOffset("singDOWN", 4, 0);
+
+			case 'deimos-guitar':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/deimos_guitar', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Didle', 24);
+				animation.addByPrefix('singUP', 'up', 24);
+				animation.addByPrefix('singRIGHT', 'right', 24);
+				animation.addByPrefix('singDOWN', 'down', 24);
+				animation.addByPrefix('singLEFT', 'left', 24);
+		
+				addOffset('idle');
+				addOffset("singUP", 10, -13);
+				addOffset("singRIGHT", 0, -32);
+				addOffset("singLEFT", -34, 0);
+				addOffset("singDOWN", 0, 0);
 	
-					playAnim('idle');
+				playAnim('idle');
+				
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;

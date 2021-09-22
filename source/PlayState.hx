@@ -710,10 +710,10 @@ class PlayState extends MusicBeatState
 						*/
 			}
 
-			case 'deimos':
+			case 'deimosBG':
 				{
-					curStage = 'deimos';
-					defaultCamZoom = 0.7;
+					curStage = 'deimosBG';
+					defaultCamZoom = 1.0;
 
 					var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('deimos/skyy'));
 					bg.antialiasing = true;
@@ -846,6 +846,14 @@ class PlayState extends MusicBeatState
 			case 'spirit':
 				dad.x -= 150;
 				dad.y += 100;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'deimos':
+				dad.x += 187;
+				dad.y -= 194;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'deimos-guitar':
+				dad.x += 185;
+				dad.y -= 205;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
